@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "99c6ec4f",
+  "name": "Portfolio safe maintenance",
+  "cwd": "C:\\Users\\gamin\\.nova\\worktrees\\s-1787578954779-cy3q-attempt-1",
+  "trigger": {
+    "kind": "interval",
+    "every": "24h",
+    "everyMs": 86400000,
+    "anchorAt": "2026-08-24T14:19:29.154Z",
+    "nextRunAt": "2026-08-25T14:19:29.154Z"
+  },
+  "target": {
+    "workflowScript": "return runs.run(\"portfolio-maintainer\", { agent: \"worker\", task: \"You are the scheduled maintainer for this repository only. Read SAFETY.md, CONTRIBUTING.md, .tellnova/AUTOMATION.md, and the root README before making any change. Make at most one small, well-tested, defensive improvement to the portfolio if a concrete safe improvement is evident. Do not add networking, shell/process control, persistence, payloads, credential handling, remote control, scanning of third-party systems, or live-response integrations. The C2 Training Lab must remain an offline simulation with no networking or command execution. Never modify Git remotes, identities, CI permissions, branch protections, or automation safeguards. Run exactly these gates before any commit: python scripts/validate.py; git diff --check -- . ':(exclude).pi/goals/**' ':(exclude).pi/subagents/**' ':(exclude).pi/.goals-pool-snapshot.json'; python -m projects.pipeline_exposure .github --fail-on high; python scripts/safe_maintenance.py --check. If a gate fails, there is no substantive safe change, changes are already staged, or a safety concern exists, stop without committing or pushing and report the reason. Only if all gates pass, create and push one guarded commit with: python scripts/safe_maintenance.py --commit --push --message \\\"chore(maintenance): validated portfolio updates\\\". Never force push, retry by weakening safeguards, request or expose credentials, or work outside this repository. Return a concise summary with commands and resulting commit/push status.\" })"
+  },
+  "overlap": "skip",
+  "catchUp": "latest",
+  "paused": false,
+  "createdAt": "2026-08-24T14:19:29.154Z",
+  "updatedAt": "2026-08-24T14:19:29.154Z"
+}

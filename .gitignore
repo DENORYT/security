@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+reports/
+
+# Pi/Tellnova runtime state is machine-local; project configuration stays tracked.
+.pi/.goals-pool-snapshot.json
+.pi/goals/
+.pi/subagents/

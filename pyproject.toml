@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "defensive-security-engineering-portfolio"
+version = "0.1.0"
+description = "Safety-first cybersecurity portfolio projects implemented with the Python standard library."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Portfolio Maintainer" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+]
+
+[tool.setuptools]
+packages = [
+  "projects",
+  "projects.waf_guard",
+  "projects.c2_lab",
+  "projects.pipeline_exposure",
+  "projects.soar_playbook",
+]

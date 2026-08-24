@@ -1,0 +1,30 @@
+{
+  "agents": [
+    {
+      "agent_id": "lab-node-01",
+      "display_name": "training-workstation",
+      "platform": "windows-lab",
+      "asset_tag": "LAB-001"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "inventory-001",
+      "agent_id": "lab-node-01",
+      "kind": "inventory_snapshot",
+      "parameters": {}
+    },
+    {
+      "task_id": "checkin-001",
+      "agent_id": "lab-node-01",
+      "kind": "training_check_in",
+      "parameters": {}
+    },
+    {
+      "task_id": "label-001",
+      "agent_id": "lab-node-01",
+      "kind": "evidence_label",
+      "parameters": {"label": "analyst-practice"}
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "method": "GET",
+  "path": "/catalog/items",
+  "query": "category=books&page=2",
+  "headers": {
+    "User-Agent": "Mozilla/5.0",
+    "Accept": "application/json"
+  },
+  "body": ""
+}

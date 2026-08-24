@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "path": "/files/../../private/notes",
+  "query": "",
+  "headers": {
+    "User-Agent": "training-client/1.0"
+  },
+  "body": ""
+}
